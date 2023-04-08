@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block navigation %}
+{% include "layout/nav.html" %}
+{% endblock %} {% block header %}
+{% include "layout/header.html" %}
+{% endblock%}
+{% block content %}
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    With over 13 years of experience as a software developer, my focus has been on building robust e-commerce solutions.
+    As a specialist in front-end technologies, particularly Vue.js, I've delivered high-performance solutions based on
+    Pimcore and Magento (now Adobe Commerce).
+  </p>
+  <div id="triangle1"></div>
+  <div id="triangle2"></div>
+</section>
+<section id="skills">
+  <i class="fas fa-laptop-code"></i>
+  <h2>Skills</h2>
+  <ul>
+    <li>Python</li>
+    <li>Flask</li>
+    <li>SQLAlchemy</li>
+    <li>GitHub</li>
+    <li>Visual Studio Code</li>
+  </ul>
+</section>
+<section id="projects">
+  <div id="triangle3"></div>
+  <i class="fas fa-file-code"></i>
+  <h2>Projects</h2>
+  <div id="project-list">
+    {% for project in projects %}
+    <div id="project1" class="a-project">
+      <h3>{{ project.title }}</h3>
+      <a href="{{ project.github_link }}" class="github-btn">
+        <i class="fab fa-github"></i>
+        View on GitHub
+      </a>
+      <p>{{ project.short_description }}</p>
+      <p>Skills: {{ project.skills }}.</p>
+    </div>
+    {% endfor %}
+  </div>
+  <div id="triangle4"></div>
+</section>
+<section id="contact">
+  <i class="fas fa-paper-plane"></i>
+  <h2>Contact Me</h2>
+  <p>
+    If you have any questions, suggestions, or just want to say hello, please
+    feel free to contact me using the email below. I'll do my best to get back
+    to you as soon as possible.
+  </p>
+  <p>
+    <i class="fas fa-envelope"></i>
+    info@webark.de
+  </p>
+</section>
+{% endblock %}
+{% block footer %}
+{% include "layout/footer.html" %}
+{% endblock%}

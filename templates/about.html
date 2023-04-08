@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block navigation %}
+{% include "layout/nav.html" %}
+{% endblock %}
+{% block header %}
+{% include "layout/header.html" %}
+{% endblock%}
+
+{% block content %}
+<section id="about-page">
+    <div id="triangle7"></div>
+    <div id="triangle8"></div>
+    <h2>My short story</h2>
+    <p>
+        With over 13 years of experience as a software developer, my focus has been on building robust e-commerce
+        solutions. As a specialist in front-end technologies, particularly Vue.js, I've delivered high-performance
+        solutions based on Pimcore and Magento (now Adobe Commerce).
+
+    </p>
+    <p>
+        My passion for innovation led me to transition to data science two years ago, and I have since earned a master's
+        degree in the field with a primary focus on NLP. I am proud to have authored four scientific papers and worked
+        on two data science projects, demonstrating my dedication to pushing the boundaries of research and development.
+
+    </p>
+    <a
+        href="https://www.canva.com/design/DAFeL-OltGY/wyRAhip9gSvSMXKGsafPXA/edit?utm_content=DAFeL-OltGY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"><i
+            class="far fa-file"></i>Resume</a>
+</section>
+{% endblock%}
+{% block footer %}
+{% include "layout/footer.html" %}
+{% endblock%}
