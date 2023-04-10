@@ -85,4 +85,4 @@ if __name__ == '__main__':
         else:
             print('My projects already added to database')    
 
-    app.run(debug=False, port=8001, host='127.0.0.1')
+    app.run(debug=False, port=8002, host='127.0.0.1')
