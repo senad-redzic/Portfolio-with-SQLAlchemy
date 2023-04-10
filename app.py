@@ -32,7 +32,7 @@ def new_project():
         return redirect(url_for('projectadded'))
     return render_template('projectform.html', projects=projects)
 
-@app.route('/projects/<int:id>')
+@app.route('/project/<int:id>')
 def project_detail(id):
     projects = Project.query.all()
     project = Project.query.get(id)
