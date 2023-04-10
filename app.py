@@ -75,10 +75,10 @@ if __name__ == '__main__':
 
         if not Project.query.all(): 
             # My Projects
-            first_project = Project('The Number Guessing Game', '2023-02-28', 'Python', 'This small console game is developed using Python only. The goal of the game is to guess random number in a range from 0 to 10.', 'https://github.com/webark-de/Python---The-Number-Guessing-Game')
-            second_project = Project('Basketball Team Stats Tool', '2023-03-07', 'Python', 'Simple Python project', 'https://github.com/webark-de/Basketball-Team-Stats-Tool')
-            third_project = Project('Phrase Hunter Game', '2023-03-23', 'HTML, CSS, JavaScript', 'This game is a good example of using object-oriented programming principles in Python, including creating classes, defining methods, and managing attributes of objects.', 'https://github.com/webark-de/OOP-phrase-hunter-game')
-            fourth_project = Project('Store Invetory', '2021-03-30', 'Python, SQL, sqlalchemy', 'Console application that allows you to easily interact with data for a store inventory.', 'https://github.com/webark-de/store_inventory')
+            first_project = Project('The Number Guessing Game', datetime.strptime('2023-02-28', '%Y-%m-%d').date(), 'Python', 'This small console game is developed using Python only. The goal of the game is to guess random number in a range from 0 to 10.', 'https://github.com/webark-de/Python---The-Number-Guessing-Game')
+            second_project = Project('Basketball Team Stats Tool', datetime.strptime('2023-03-07', '%Y-%m-%d').date(), 'Python', 'Simple Python project', 'https://github.com/webark-de/Basketball-Team-Stats-Tool')
+            third_project = Project('Phrase Hunter Game', datetime.strptime('2023-03-23', '%Y-%m-%d').date(), 'HTML, CSS, JavaScript', 'This game is a good example of using object-oriented programming principles in Python, including creating classes, defining methods, and managing attributes of objects.', 'https://github.com/webark-de/OOP-phrase-hunter-game')
+            fourth_project = Project('Store Invetory', datetime.strptime('2021-03-30', '%Y-%m-%d').date(), 'Python, SQL, sqlalchemy', 'Console application that allows you to easily interact with data for a store inventory.', 'https://github.com/webark-de/store_inventory')
             
             db.session.add_all([first_project, second_project, third_project, fourth_project])
             db.session.commit()
