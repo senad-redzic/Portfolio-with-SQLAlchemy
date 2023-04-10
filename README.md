@@ -20,5 +20,5 @@ Install the required packages using pip:
 
 ```pip install -r requirements.txt```
 
-### What did I learn 
+### What did I learn?  
 This project was a great experience that helped me to additionally understand how Flask works, and how to incorporate a database using SQLAlchemy. I was able to learn how to create routes and views using Flask, how to use SQLAlchemy to define and interact with database tables, and how to use HTML and CSS to display data in a user-friendly way. 
