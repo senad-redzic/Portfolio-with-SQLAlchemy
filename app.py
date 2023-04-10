@@ -39,13 +39,13 @@ def new_project():
 @app.route('/project/<int:id>')
 def project_detail(id):
     projects = Project.query.all()
-    project = Project.query.get(id)
+    project = Project.query.get_or_404(id)
     return render_template('detail.html', project=project, projects=projects)
 
 @app.route('/projects/<int:id>/edit', methods=['GET', 'POST'])
 def edit_project(id):
     projects = Project.query.all()
-    project = Project.query.get(id)
+    project = Project.query.get_or_404(id)
     if request.method == 'POST':
         project.title = request.form['title']
         project.date = datetime.strptime(request.form['date'], '%Y-%m-%d').date()
@@ -68,7 +68,7 @@ def projectdeleted():
 
 @app.route('/projects/<int:id>/delete', methods=['GET', 'POST'])
 def delete_project(id):
-    project = Project.query.get(id)
+    project = Project.query.get_or_404(id)
     db.session.delete(project)
     db.session.commit()
     return redirect(url_for('projectdeleted'))
