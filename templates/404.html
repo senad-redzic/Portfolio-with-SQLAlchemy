@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block navigation %}
+{% include "layout/nav.html" %}
+{% endblock %}
+
+{% block content %}
+<div style="text-align:center;"clas="container">
+  <h2>Page nout found.</h2>
+<div>
+  <p>Go back or enjoy the image of this cute puppy.</p>
+  <button class="button-goback" onclick="history.back()">Go back</button>
+</div>
+  <img style="margin-top: 40px; margin-bottom:40px;" src="https://cf.ltkcdn.net/dogs/puppies/images/orig/321597-1600x1030-cutest-puppy-videos.jpg">
+</div>
+
+{% endblock%}
+
+{% block footer %}
+{% include "layout/footer.html" %}
+{% endblock%}

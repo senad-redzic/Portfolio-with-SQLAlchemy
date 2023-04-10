@@ -11,6 +11,10 @@ def index():
     projects = Project.query.all()
     return render_template('index.html', projects=projects)
 
+@app.errorhandler(404)
+def not_found_error(error):
+    return render_template('404.html'), 404
+
 @app.route('/projectadded')
 def projectadded():
     projects = Project.query.all()
